@@ -27,6 +27,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 # custom
 gem 'faker'
+gem 'autoprefixer-rails'
+gem 'font-awesome-sass', '~> 5.6.1'
 gem 'simple_form'
 
 

@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>All our Flats (<%= Flat.count %>)</h1>
+  <div class="d-flex">
+    <% @flats.each do |flat| %>
+      <div class="card bg-light p-2 m-2" style="width: 18rem;">
+        <img src="">
+        <h2><%= flat.name %></h2>
+        <p><%= flat.address %></p>
+        <div class="d-flex justify-content-evenly">
+          <p><i class="fas fa-user-friends"></i> <%= flat.number_of_guests %></p>
+          <p><i class="fas fa-user-friends"></i> <%= flat.price_per_night %></p>
+        </div>
+        <div class="d-flex justify-content-evenly">
+          <%= link_to "More Info", flat_path(flat) %>
+          <%= link_to "Edit", edit_flat_path(flat) %>
+          <%= link_to "Delete", flat_path(flat), method: :delete, data: { confirm: "Are you sure?" } %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
